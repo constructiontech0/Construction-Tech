@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Construction Tech</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    img.logo {
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+    .language-buttons {
+      margin: 10px;
+      text-align: center;
+    }
+    .language-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .content {
+      padding: 20px;
+      display: none;
+    }
+    .content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Construction Tech Logo" class="logo">
+    <h1>Construction Tech</h1>
+    <p>Your trusted source for construction updates & info</p>
+  </header>
+
+  <div class="language-buttons">
+    <button onclick="showContent('english')">English</button>
+    <button onclick="showContent('bangla')">বাংলা</button>
+  </div>
+
+  <div id="english" class="content active">
+    <h2>Welcome!</h2>
+    <p>This website will provide blog posts, news, and construction updates in both English and Bengali. Stay connected!</p>
+  </div>
+
+  <div id="bangla" class="content">
+    <h2>স্বাগতম!</h2>
+    <p>এই ওয়েবসাইটে আপনি পাবেন কন্সট্রাকশন সংক্রান্ত ব্লগ, খবর এবং আপডেট — বাংলায় এবং ইংরেজিতে। সঙ্গে থাকুন!</p>
+  </div>
+
+  <script>
+    function showContent(lang) {
+      document.getElementById('english').classList.remove('active');
+      document.getElementById('bangla').classList.remove('active');
+      document.getElementById(lang).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+
+
+---
